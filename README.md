@@ -1,6 +1,6 @@
 # Inject Baileys --- README de uso
 
-Documentação prática do `injectOFC.js`, baseada nas funções e atalhos
+Documentação prática do `inject.js`, baseada nas funções e atalhos
 realmente implementados no arquivo.
 
 > O injector modifica `socket.sendMessage()` e adiciona vários helpers
@@ -9,11 +9,11 @@ realmente implementados no arquivo.
 
 ## Instalação
 
-Coloque `injectOFC.js` no projeto e injete o socket **uma vez**, depois
+Coloque `inject.js` no projeto e injete o socket **uma vez**, depois
 de criá-lo:
 
 ``` js
-const { injectButtons } = require("./injectOFC");
+const { injectButtons } = require("./inject");
 
 const sock = makeWASocket({
   // suas configs...
@@ -25,7 +25,7 @@ injectButtons(sock);
 Também funciona assim:
 
 ``` js
-const inject = require("./injectOFC");
+const inject = require("./inject");
 inject.injectButtons(sock);
 ```
 
@@ -1293,7 +1293,7 @@ await sock.sendMessage(jid, {
 Ou diretamente:
 
 ``` js
-const { sendRichProduct } = require("./injectOFC");
+const { sendRichProduct } = require("./inject");
 
 await sendRichProduct(sock, jid, {
   titulo: "Produto",
@@ -1878,7 +1878,7 @@ await sock.sendMultiButton(
 # 40. Exemplo completo
 
 ``` js
-const { injectButtons } = require("./injectOFC");
+const { injectButtons } = require("./inject");
 
 injectButtons(sock);
 
@@ -2033,7 +2033,7 @@ const {
   saveBotForm,
   extractGalaxyFormResponse,
   emitFormMessage
-} = require("./injectOFC");
+} = require("./inject");
 ```
 
 Na prática, para uso normal do bot, basta importar `injectButtons` e
@@ -2067,7 +2067,7 @@ trabalhar pelos métodos adicionados ao socket.
 Se você só quer começar:
 
 ``` js
-const { injectButtons } = require("./injectOFC");
+const { injectButtons } = require("./inject");
 injectButtons(sock);
 ```
 
